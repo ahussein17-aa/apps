@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yalla Designs: five apps for learning and living Islam</title>
+<meta name="description" content="Sahaba, Daily Dhikr, 99 Names, Ayah and Dawah Companion. Free, offline and private apps for iPhone and Android.">
+<meta name="theme-color" content="#1B582A">
+<link rel="canonical" href="https://ahussein17-aa.github.io/apps/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Yalla Designs: five apps for learning and living Islam">
+<meta property="og:description" content="Sahaba, Daily Dhikr, 99 Names, Ayah and Dawah Companion. Free, offline and private.">
+<meta property="og:url" content="https://ahussein17-aa.github.io/apps/">
+<meta property="og:image" content="https://ahussein17-aa.github.io/apps/icons/sahaba.png">
+<link rel="icon" href="icons/sahaba.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --bg:#FAF5EB; --ink:#29302A; --soft:#615C52; --card:#FFFFFF; --line:#E1D6C2; --green:#1B582A; --gold:#B08A3E; --wash:#F3ECDD;
+    --yd-badge-bg:#29302A; --yd-badge-fg:#FAF5EB;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#1A1714; --ink:#F0EBDC; --soft:#B8B1A4; --card:#262119; --line:#3D362C; --green:#5CBD75; --gold:#E0B86B; --wash:#211C16;
+      --yd-badge-bg:#F0EBDC; --yd-badge-fg:#1A1714; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: Inter, -apple-system, "Segoe UI", sans-serif; font-size: 1.0625rem; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3 { font-family: "Source Serif 4", Georgia, serif; font-weight: 600; text-wrap: balance; margin: 0; }
+  p { margin: 0; }
+  a { color: var(--green); }
+  .wrap { max-width: 68rem; margin: 0 auto; padding: 0 1.5rem; }
+
+  .top { padding: 4rem 0 2.5rem; text-align: center; }
+  .brand { font-size: 0.8rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 1rem; }
+  .top h1 { font-size: clamp(2.1rem, 5.2vw, 3.3rem); letter-spacing: -0.01em; margin-bottom: 1rem; }
+  .top p { color: var(--soft); max-width: 36rem; margin: 0 auto; font-size: clamp(1.05rem, 2vw, 1.2rem); }
+  .pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin-top: 1.5rem; }
+  .pill { border: 1px solid var(--line); border-radius: 2rem; padding: 0.3rem 0.9rem; font-size: 0.88rem; color: var(--soft); background: var(--card); }
+
+  .lead { display: grid; grid-template-columns: 1.1fr 1fr; gap: 2.5rem; align-items: center; background: var(--card); border: 1px solid var(--line); border-radius: 1.75rem; padding: 2.5rem; margin: 1.5rem 0 2rem; }
+  .lead .label { font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 1rem; }
+  .lead .head { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+  .lead .head img { width: 4.5rem; height: 4.5rem; border-radius: 1.1rem; }
+  .lead h2 { font-size: clamp(1.6rem, 3.4vw, 2.2rem); }
+  .lead .tag { color: var(--green); font-weight: 600; margin-bottom: 0.6rem; }
+  .lead .blurb { color: var(--soft); margin-bottom: 1.5rem; }
+  .lead .yd-badges { justify-content: flex-start; }
+  .lead .learn { display: inline-block; margin-top: 1.1rem; }
+  .lead .shots { display: flex; justify-content: center; gap: 1rem; }
+  .lead .shots img { width: 46%; max-width: 13rem; height: auto; border-radius: 1.4rem; border: 1px solid var(--line); box-shadow: 0 18px 40px -20px rgba(41,48,42,.45); }
+  .lead .shots img:last-child { margin-top: 2rem; }
+  @media (max-width: 52rem) {
+    .lead { grid-template-columns: 1fr; padding: 1.6rem; }
+    .lead .yd-badges { justify-content: center; }
+    .lead .text { text-align: center; } .lead .head { justify-content: center; flex-direction: column; }
+  }
+
+  .apps { display: grid; grid-template-columns: repeat(auto-fit, minmax(14.5rem, 1fr)); gap: 1.25rem; padding-bottom: 4rem; }
+  .app { background: var(--card); border: 1px solid var(--line); border-radius: 1.4rem; padding: 1.75rem 1.5rem; text-align: center; display: flex; flex-direction: column; align-items: center; }
+  .app img { width: 4.5rem; height: 4.5rem; border-radius: 1.1rem; margin-bottom: 1rem; }
+  .app h3 { font-size: 1.3rem; margin-bottom: 0.35rem; }
+  .app .tag { color: var(--green); font-weight: 600; font-size: 0.98rem; margin-bottom: 0.6rem; }
+  .app .blurb { color: var(--soft); font-size: 0.96rem; margin-bottom: 1.4rem; flex: 1; }
+  .app .yd-badge { min-width: 0; width: 100%; justify-content: center; }
+  .app .yd-badges { width: 100%; flex-direction: column; }
+  .app .learn { margin-top: 1.1rem; font-size: 0.95rem; }
+
+  footer { border-top: 1px solid var(--line); padding: 2.25rem 0 3rem; text-align: center; color: var(--soft); font-size: 0.92rem; }
+
+  .yd-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
+  .yd-badge {
+    display: inline-flex; align-items: center; gap: 0.65rem; min-width: 11.5rem;
+    background: var(--yd-badge-bg, #1c1c1e); color: var(--yd-badge-fg, #fff);
+    border: 1px solid var(--yd-badge-border, transparent);
+    border-radius: 0.75rem; padding: 0.6rem 1.25rem 0.65rem 1rem;
+    text-decoration: none; transition: transform 0.15s ease;
+  }
+  a.yd-badge:hover { transform: translateY(-2px); }
+  .yd-badge svg { flex: none; }
+  .yd-lines { text-align: left; line-height: 1.2; }
+  .yd-small { display: block; font-size: 0.7rem; letter-spacing: 0.04em; opacity: 0.8; }
+  .yd-big { display: block; font-size: 1.15rem; font-weight: 600; }
+  .yd-soon { background: transparent; color: var(--yd-soon-fg, currentColor); border: 1px dashed var(--yd-soon-border, currentColor); opacity: 0.7; }
+  @media (prefers-reduced-motion: reduce) { .yd-badge { transition: none; } }
+
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <p class="brand">Yalla Designs</p>
+    <h1>Five apps for learning and living Islam</h1>
+    <p>Stories of the Companions, daily adhkar, the Names of Allah, signs of the Qur'an, and help explaining Islam to others.</p>
+    <div class="pills"><span class="pill">Free</span><span class="pill">Works offline</span><span class="pill">No account</span><span class="pill">No ads</span><span class="pill">No tracking</span></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="lead">
+    <div class="text">
+      <p class="label">Start here</p>
+      <div class="head"><img src="icons/sahaba.png" alt="Sahaba app icon" width="72" height="72"><h2>Sahaba: Lives of Companions</h2></div>
+      <p class="tag">The lives of the Companions, told simply.</p>
+      <p class="blurb">Sixty companions of the Prophet ﷺ, each told as a full story, with reflections, collections and home screen widgets.</p>
+      <div class="yd-badges"><a class="yd-badge" href="https://apps.apple.com/app/id6779983950"><svg width="22" height="26" viewBox="0 0 26 30" fill="currentColor" aria-hidden="true"><path d="M21.6 15.9c0-3.1 2.5-4.6 2.6-4.7-1.4-2.1-3.7-2.4-4.5-2.4-1.9-.2-3.7 1.1-4.7 1.1-1 0-2.5-1.1-4.1-1.1-2.1 0-4 1.2-5.1 3.1-2.2 3.8-.6 9.3 1.6 12.4 1 1.5 2.3 3.1 3.9 3.1 1.6-.1 2.2-1 4.1-1 1.9 0 2.4 1 4.1 1 1.7 0 2.8-1.5 3.8-3 1.2-1.7 1.7-3.4 1.7-3.5-.1 0-3.4-1.3-3.4-5zM18.4 6.3c.9-1 1.4-2.4 1.3-3.8-1.2.1-2.7.8-3.6 1.8-.8.9-1.5 2.3-1.3 3.7 1.4.1 2.7-.7 3.6-1.7z"/></svg><span class="yd-lines"><span class="yd-small">Download on the</span><span class="yd-big">App Store</span></span></a><span class="yd-badge yd-soon" aria-disabled="true"><svg width="22" height="24" viewBox="0 0 24 26" fill="currentColor" aria-hidden="true"><path d="M3.2 1.1c-.5.3-.8.9-.8 1.600v20.600c0 .7.3 1.300.8 1.600L14.600 13 3.200 1.100zM16 11.500 5.800 1.300l12.700 7.300L16 11.500zM16 14.500l2.500 2.900L5.800 24.700 16 14.500zM20.300 9.700l2.600 1.500c1.400.8 1.400 2.800 0 3.600l-2.600 1.500L17.400 13l2.900-3.300z"/></svg><span class="yd-lines"><span class="yd-small">Coming soon on</span><span class="yd-big">Google Play</span></span></span></div>
+      <a class="learn" href="https://ahussein17-aa.github.io/sahaba-site/">See more about Sahaba</a>
+    </div>
+    <div class="shots">
+      <img src="shots/sahaba-home.webp" alt="Sahaba home screen with the Sahabi of the Day" width="480" height="853">
+      <img src="shots/sahaba-person.webp" alt="A companion's story in Sahaba" width="480" height="853" loading="lazy">
+    </div>
+  </section>
+
+  <section class="apps" aria-label="More apps">
+      <article class="app">
+        <img src="icons/dailydhikr.png" alt="Daily Dhikr app icon" width="72" height="72">
+        <h3>Daily Dhikr: Adhkar &amp; Tasbih</h3>
+        <p class="tag">Morning, evening and sleep adhkar, with a daily streak.</p>
+        <p class="blurb">More than 100 authentic adhkar, a tap counter, gentle reminders and a streak to keep you going.</p>
+        <div class="yd-badges"><a class="yd-badge" href="https://apps.apple.com/app/id6817398522"><svg width="22" height="26" viewBox="0 0 26 30" fill="currentColor" aria-hidden="true"><path d="M21.6 15.9c0-3.1 2.5-4.6 2.6-4.7-1.4-2.1-3.7-2.4-4.5-2.4-1.9-.2-3.7 1.1-4.7 1.1-1 0-2.5-1.1-4.1-1.1-2.1 0-4 1.2-5.1 3.1-2.2 3.8-.6 9.3 1.6 12.4 1 1.5 2.3 3.1 3.9 3.1 1.6-.1 2.2-1 4.1-1 1.9 0 2.4 1 4.1 1 1.7 0 2.8-1.5 3.8-3 1.2-1.7 1.7-3.4 1.7-3.5-.1 0-3.4-1.3-3.4-5zM18.4 6.3c.9-1 1.4-2.4 1.3-3.8-1.2.1-2.7.8-3.6 1.8-.8.9-1.5 2.3-1.3 3.7 1.4.1 2.7-.7 3.6-1.7z"/></svg><span class="yd-lines"><span class="yd-small">Download on the</span><span class="yd-big">App Store</span></span></a><span class="yd-badge yd-soon" aria-disabled="true"><svg width="22" height="24" viewBox="0 0 24 26" fill="currentColor" aria-hidden="true"><path d="M3.2 1.1c-.5.3-.8.9-.8 1.600v20.600c0 .7.3 1.300.8 1.600L14.600 13 3.200 1.100zM16 11.500 5.800 1.300l12.700 7.300L16 11.500zM16 14.500l2.500 2.900L5.800 24.700 16 14.500zM20.300 9.700l2.600 1.500c1.400.8 1.400 2.800 0 3.600l-2.600 1.500L17.400 13l2.900-3.300z"/></svg><span class="yd-lines"><span class="yd-small">Coming soon on</span><span class="yd-big">Google Play</span></span></span></div>
+        <a class="learn" href="https://ahussein17-aa.github.io/daily-dhikr-site/">See more about Daily Dhikr</a>
+      </article>
+      <article class="app">
+        <img src="icons/names99.png" alt="99 Names app icon" width="72" height="72">
+        <h3>99 Names of Allah</h3>
+        <p class="tag">Know Allah through His Beautiful Names.</p>
+        <p class="blurb">All ninety-nine Names with a reflection and a suggested du&#x27;a for each, flashcards, a quiz and a Name for every situation.</p>
+        <div class="yd-badges"><a class="yd-badge" href="https://apps.apple.com/app/id6779980837"><svg width="22" height="26" viewBox="0 0 26 30" fill="currentColor" aria-hidden="true"><path d="M21.6 15.9c0-3.1 2.5-4.6 2.6-4.7-1.4-2.1-3.7-2.4-4.5-2.4-1.9-.2-3.7 1.1-4.7 1.1-1 0-2.5-1.1-4.1-1.1-2.1 0-4 1.2-5.1 3.1-2.2 3.8-.6 9.3 1.6 12.4 1 1.5 2.3 3.1 3.9 3.1 1.6-.1 2.2-1 4.1-1 1.9 0 2.4 1 4.1 1 1.7 0 2.8-1.5 3.8-3 1.2-1.7 1.7-3.4 1.7-3.5-.1 0-3.4-1.3-3.4-5zM18.4 6.3c.9-1 1.4-2.4 1.3-3.8-1.2.1-2.7.8-3.6 1.8-.8.9-1.5 2.3-1.3 3.7 1.4.1 2.7-.7 3.6-1.7z"/></svg><span class="yd-lines"><span class="yd-small">Download on the</span><span class="yd-big">App Store</span></span></a><span class="yd-badge yd-soon" aria-disabled="true"><svg width="22" height="24" viewBox="0 0 24 26" fill="currentColor" aria-hidden="true"><path d="M3.2 1.1c-.5.3-.8.9-.8 1.600v20.600c0 .7.3 1.300.8 1.600L14.600 13 3.200 1.100zM16 11.500 5.800 1.300l12.700 7.300L16 11.500zM16 14.500l2.500 2.900L5.800 24.700 16 14.500zM20.300 9.700l2.600 1.500c1.400.8 1.400 2.800 0 3.600l-2.600 1.500L17.400 13l2.900-3.300z"/></svg><span class="yd-lines"><span class="yd-small">Coming soon on</span><span class="yd-big">Google Play</span></span></span></div>
+        <a class="learn" href="https://ahussein17-aa.github.io/99-names-pages/">See more about 99 Names</a>
+      </article>
+      <article class="app">
+        <img src="icons/ayah.png" alt="Ayah app icon" width="72" height="72">
+        <h3>Ayah: Signs of the Qur&#x27;an</h3>
+        <p class="tag">Reflect on the signs within the Qur&#x27;an.</p>
+        <p class="blurb">71 signs across ten categories, each with the ayah, its meaning and an honest note on how certain the reading is.</p>
+        <div class="yd-badges"><span class="yd-badge yd-soon" aria-disabled="true"><svg width="22" height="26" viewBox="0 0 26 30" fill="currentColor" aria-hidden="true"><path d="M21.6 15.9c0-3.1 2.5-4.6 2.6-4.7-1.4-2.1-3.7-2.4-4.5-2.4-1.9-.2-3.7 1.1-4.7 1.1-1 0-2.5-1.1-4.1-1.1-2.1 0-4 1.2-5.1 3.1-2.2 3.8-.6 9.3 1.6 12.4 1 1.5 2.3 3.1 3.9 3.1 1.6-.1 2.2-1 4.1-1 1.9 0 2.4 1 4.1 1 1.7 0 2.8-1.5 3.8-3 1.2-1.7 1.7-3.4 1.7-3.5-.1 0-3.4-1.3-3.4-5zM18.4 6.3c.9-1 1.4-2.4 1.3-3.8-1.2.1-2.7.8-3.6 1.8-.8.9-1.5 2.3-1.3 3.7 1.4.1 2.7-.7 3.6-1.7z"/></svg><span class="yd-lines"><span class="yd-small">Coming soon on the</span><span class="yd-big">App Store</span></span></span><span class="yd-badge yd-soon" aria-disabled="true"><svg width="22" height="24" viewBox="0 0 24 26" fill="currentColor" aria-hidden="true"><path d="M3.2 1.1c-.5.3-.8.9-.8 1.600v20.600c0 .7.3 1.300.8 1.600L14.600 13 3.200 1.100zM16 11.500 5.800 1.300l12.700 7.300L16 11.500zM16 14.500l2.500 2.900L5.800 24.700 16 14.500zM20.300 9.700l2.600 1.500c1.400.8 1.400 2.800 0 3.600l-2.600 1.500L17.400 13l2.900-3.300z"/></svg><span class="yd-lines"><span class="yd-small">Coming soon on</span><span class="yd-big">Google Play</span></span></span></div>
+        <a class="learn" href="https://ahussein17-aa.github.io/ayah-site/">See more about Ayah</a>
+      </article>
+      <article class="app">
+        <img src="icons/dawah.png" alt="Dawah Companion app icon" width="72" height="72">
+        <h3>Dawah Companion</h3>
+        <p class="tag">Explain Islam clearly and with confidence.</p>
+        <p class="blurb">Answers to the questions people really ask, with references, courses, practice drills and an Exhibition Mode for the stall.</p>
+        <div class="yd-badges"><a class="yd-badge" href="https://apps.apple.com/app/id6817459810"><svg width="22" height="26" viewBox="0 0 26 30" fill="currentColor" aria-hidden="true"><path d="M21.6 15.9c0-3.1 2.5-4.6 2.6-4.7-1.4-2.1-3.7-2.4-4.5-2.4-1.9-.2-3.7 1.1-4.7 1.1-1 0-2.5-1.1-4.1-1.1-2.1 0-4 1.2-5.1 3.1-2.2 3.8-.6 9.3 1.6 12.4 1 1.5 2.3 3.1 3.9 3.1 1.6-.1 2.2-1 4.1-1 1.9 0 2.4 1 4.1 1 1.7 0 2.8-1.5 3.8-3 1.2-1.7 1.7-3.4 1.7-3.5-.1 0-3.4-1.3-3.4-5zM18.4 6.3c.9-1 1.4-2.4 1.3-3.8-1.2.1-2.7.8-3.6 1.8-.8.9-1.5 2.3-1.3 3.7 1.4.1 2.7-.7 3.6-1.7z"/></svg><span class="yd-lines"><span class="yd-small">Download on the</span><span class="yd-big">App Store</span></span></a><span class="yd-badge yd-soon" aria-disabled="true"><svg width="22" height="24" viewBox="0 0 24 26" fill="currentColor" aria-hidden="true"><path d="M3.2 1.1c-.5.3-.8.9-.8 1.600v20.600c0 .7.3 1.300.8 1.600L14.600 13 3.200 1.100zM16 11.500 5.800 1.300l12.700 7.300L16 11.500zM16 14.500l2.500 2.900L5.800 24.700 16 14.500zM20.300 9.700l2.600 1.500c1.400.8 1.400 2.800 0 3.600l-2.600 1.500L17.400 13l2.900-3.300z"/></svg><span class="yd-lines"><span class="yd-small">Coming soon on</span><span class="yd-big">Google Play</span></span></span></div>
+        <a class="learn" href="https://ahussein17-aa.github.io/dawah-companion-site/">See more about Dawah Companion</a>
+      </article>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><p>© 2026 Yalla Designs · Made in Ireland</p></div>
+</footer>
+
+</body>
+</html>
