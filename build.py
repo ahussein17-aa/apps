@@ -46,7 +46,7 @@ APPS = {
     "ayah": dict(
         name="Ayah", full="Ayah: Signs of the Qur'an",
         tagline="Reflect on the signs within the Qur'an.",
-        blurb="71 signs across ten categories, each with the ayah, its meaning and an honest note on how certain the reading is.",
+        blurb="90 signs across ten categories, each with the ayah, its meaning and an honest note on how certain the reading is.",
         site=ROOT / "Ayah/docs/site", url="https://ahussein17-aa.github.io/ayah-site/",
         ios="6806326809", ios_live=False, pkg="com.yalladesigns.ayah", play_live=False, shots="Ayah"),
     "dawah": dict(
@@ -242,9 +242,9 @@ CONTENT = {
     "ayah": dict(
         arabic="سَنُرِيهِمْ آيَاتِنَا", h1="Ayah", sub="Signs of the Qur'an",
         tagline="Explore the signs, wisdom and remarkable features of the Qur'an. Built for curiosity and reflection.",
-        description="Explore 71 signs of the Qur'an, from its language to the universe it describes, one reflection at a time. Fully offline, no ads, no tracking.",
+        description="Explore 90 signs of the Qur'an, from its language to the universe it describes, one reflection at a time. Fully offline, no ads, no tracking.",
         hero=[("04-categories", "Ten categories"), ("02-sign", "The ayah first, then the meaning"), ("01-home", "A sign and a reflection daily")],
-        eyebrow="What's inside", h2="71 signs, one reflection at a time",
+        eyebrow="What's inside", h2="90 signs, one reflection at a time",
         lede="Each sign opens with the ayah in Arabic and in translation, then explains what it says, how scholars have read it, and how sure we can be.",
         features=[
             ("Ten categories", "Universe and Space, Human Development, Oceans, Earth, Animals, History, Prophecies, Linguistic Signs, Mathematical Patterns and the preservation of the Qur'an."),
@@ -538,10 +538,10 @@ def patch(key, hero_badge_re, footer_store_re):
     a = APPS[key]
     f = a["site"] / "index.html"
     s = f.read_text(encoding="utf-8")
-    s = re.sub(r"\n<!-- yd:start -->.*?<!-- yd:end -->", "", s, flags=re.S)
+    s = re.sub(r"<!-- yd:start -->.*?<!-- yd:end -->\n+", "", s, flags=re.S)
     s = re.sub(r"<!-- yd:play -->.*?<!-- /yd:play -->", "", s, flags=re.S)
     s = re.sub(r"<!-- yd:hub -->.*?<!-- /yd:hub -->", "", s, flags=re.S)
-    css = f"\n<!-- yd:start --><style>{BADGE_CSS}{MORE_CSS}  .yd-play {{ margin-top: 0.75rem; display: flex; justify-content: center; }}\n</style><!-- yd:end -->"
+    css = f"<!-- yd:start --><style>{BADGE_CSS}{MORE_CSS}  .yd-play {{ margin-top: 0.75rem; display: flex; justify-content: center; }}\n</style><!-- yd:end -->"
     s = s.replace("</head>", css + "\n</head>", 1)
     s, n1 = re.subn(hero_badge_re, lambda m: m.group(0) + f'<!-- yd:play --><div class="yd-play">{badge("play", a)}</div><!-- /yd:play -->', s, count=1, flags=re.S)
     s = s.replace("<footer>", f"<!-- yd:start -->{more_apps(key)}<!-- yd:end -->\n\n<footer>", 1)
